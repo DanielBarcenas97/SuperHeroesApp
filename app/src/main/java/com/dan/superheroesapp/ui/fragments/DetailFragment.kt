@@ -34,6 +34,8 @@ class DetailFragment : Fragment() {
         setData()
         setBio()
         setAppearance()
+        setWork()
+        setConnections()
     }
 
     @SuppressLint("SetTextI18n")
@@ -67,6 +69,17 @@ class DetailFragment : Fragment() {
         binding.tvGender.text = currentHero?.appearance?.gender
         binding.tvWeight .text = currentHero?.appearance?.weight.toString()
         binding.tvHeight.text = currentHero?.appearance?.height.toString()
+    }
+
+
+    private fun setWork() {
+        binding.tvOccupation.text = currentHero?.work?.occupation
+        binding.tvBase.text = currentHero?.work?.base
+    }
+
+    private fun setConnections() {
+        binding.tvGroup.text = currentHero?.connections?.groupAffiliation
+        binding.tvRelatives.text = currentHero?.connections?.relatives
     }
 
 }
