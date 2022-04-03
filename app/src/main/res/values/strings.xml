@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">SuperHerosApp</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="velocity">Velocidad</string>
+    <string name="durability">Durabilidad</string>
+    <string name="power">Poder</string>
+    <string name="strength">Fuerza</string>
+    <string name="combat">Combate</string>
+    <string name="intelligence">Inteligencia</string>
+    <string name="blank_space">: </string>
+
 </resources>

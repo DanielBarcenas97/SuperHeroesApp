@@ -13,7 +13,9 @@ class SuperHeroViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     fun render(heroModel: ApiHeroModel, onClickListener: (ApiHeroModel) -> Unit) {
         binding.heroNameTV.text = heroModel.name
-        //binding.publisherTV.text = heroModel.biography.publisher
+
+        binding.tvData.text = heroModel.biography.fullName
+
         Glide.with(binding.imgCard.context)
             .load(heroModel.image.url)
             .diskCacheStrategy(DiskCacheStrategy.ALL)

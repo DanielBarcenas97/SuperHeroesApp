@@ -22,9 +22,6 @@ class HeroesService {
             }catch (exception: Exception){
                 return@withContext null
             }
-
-
         }
-
     }
 }

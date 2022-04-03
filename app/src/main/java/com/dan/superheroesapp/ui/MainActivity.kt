@@ -3,6 +3,7 @@ package com.dan.superheroesapp.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.dan.superheroesapp.R
 import com.dan.superheroesapp.data.model.ApiHeroModel
 import com.dan.superheroesapp.databinding.ActivityMainBinding
@@ -20,6 +21,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        installSplashScreen().apply {
+            setKeepOnScreenCondition{
+                heroViewModel.isLoading.value
+            }
+        }
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         heroViewModel.getHeroes()
